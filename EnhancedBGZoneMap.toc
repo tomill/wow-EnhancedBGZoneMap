@@ -1,0 +1,7 @@
+## Interface: 60000
+## Title: Enhanced BG Zone Map
+## Notes: Add class color and more on zone map in battleground
+## Author: Tomill
+## Version: 1.0.0
+
+EnhancedBGZoneMap.lua
