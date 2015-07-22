@@ -15,10 +15,10 @@ local BLIP_TEX_COORDS = {
     ["MONK"]        = { 0.125, 0.25, 0.25, 0.5 }, 
 }
 
-local mapScale = 1.6
-local pointScale = 1.3
-local arrowScale = 1.4
-local nameScale = 0.5
+local mapScale = 1.8
+local pointScale = 1.2
+local arrowScale = 1.3
+local nameScale = 0.6
 local nameLength = 2
 
 local classCount = { }
