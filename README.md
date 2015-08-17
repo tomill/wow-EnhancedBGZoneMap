@@ -1,19 +1,9 @@
-This addon enhances zonemap for BG players.
+This addon enhances your zonemap for BG players!
 
-currently
+* this addon focuses BG.
+* replaces player marker dots to each class color!
+* configurable map size, marker size and more.
 
-* only works in BG field
-* scale up x 1.6 (sorry hard coded not configurable)
-* hides close button or borders
-* replaces dots to class color circles
-* added names if party have more than 2 players for each class
+slash command:
 
-next version:
-
-* configureable options
-* preview mode
-
-faq
-
-* not works?
-  * type `/zonemap update`
+* `/zonemap update` - refresh markers. try this if something wrong.
