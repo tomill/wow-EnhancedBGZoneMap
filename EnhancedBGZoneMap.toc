@@ -2,7 +2,7 @@
 ## Title: Enhanced BG Zone Map
 ## Notes: Replace player marker dot to each class color and more
 ## Author: Tomill
-## Version: 1.2.1
+## Version: 1.3.0
 ## SavedVariables: EnhancedBGZoneMapDB
 
 #@no-lib-strip@

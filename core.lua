@@ -215,7 +215,7 @@ function addon:OnInitialize()
                 order = 20,
                 type = "description",
                 fontSize = "medium",
-                name = "\n\n[BETA] Field features (this is BETA!! You have been warned!!!)\n",
+                name = "\n\n[R.A.D.A.R] Field features (this is BETA!! You have been warned!!!)\n",
                 width = "full",
             },
 
