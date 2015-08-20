@@ -143,7 +143,7 @@ end
 
 tick:SetScript("OnUpdate", function(self, elapsed)
     addon.last_updated = (addon.last_updated or 0) + elapsed
-    if addon.last_updated > 1 then
+    if addon.last_updated > 1 then -- check by 1 sec
         addon.last_updated = 0
         addon:updateMarkers()
     end
@@ -160,14 +160,14 @@ function addon:OnInitialize()
             arrowScale = 1,
             pointScale = 0.5,
             hideBorder = false,
-            feature443 = true,
-            feature461 = true,
-            feature482 = true,
-            feature626 = true,
-            feature736 = true,
-            feature856 = true,
-            feature860 = true,
-            feature935 = true,
+            feature443 = false,
+            feature461 = false,
+            feature482 = false,
+            feature626 = false,
+            feature736 = false,
+            feature856 = false,
+            feature860 = false,
+            feature935 = false,
         }
     }
 
@@ -215,7 +215,7 @@ function addon:OnInitialize()
                 order = 20,
                 type = "description",
                 fontSize = "medium",
-                name = "\n\nField features (BETA!! You have been warned!!!)\n",
+                name = "\n\n[BETA] Field features (this is BETA!! You have been warned!!!)\n",
                 width = "full",
             },
 
@@ -287,21 +287,22 @@ function addon:setMaker(marker)
         marker:SetHeight(default * addon.db.profile.pointScale)
         marker:SetWidth(default * addon.db.profile.pointScale)
         
-        local _, class = UnitClass(marker.unit)
         marker.icon:SetTexture("Interface\\Minimap\\PartyRaidBlips")
         if BLIP_TEX_COORDS[classID] then
             marker.icon:SetTexCoord(unpack(BLIP_TEX_COORDS[classID]))
-        else
-            return
         end
     end
     
-    addon.markers[ marker.unit ] = {
-        x = x,
-        y = y,
-        name = name,
-        classID = classID,
-    }
+    if (UnitIsDeadOrGhost(marker.unit) or not classID) then
+        addon.markers[ marker.unit ] = nil
+    else
+        addon.markers[ marker.unit ] = {
+            x = x,
+            y = y,
+            name = name,
+            classID = classID,
+        }
+    end
 end
 
 function addon:updateInfo()
@@ -335,7 +336,7 @@ function addon:updateInfo()
         frame:SetText(posInfo.label:format(count))
         frame:Show()
         
-        if num > 0 and num < 5 then
+        if num > 0 and num <= 5 then
             local subframe = addon.info[ posID .. "Sub" ]
             subframe:SetText(subframe)
             subframe:Show()
