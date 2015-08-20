@@ -1,0 +1,2 @@
+requires 'Imager';
+requires 'Data::Dump';
