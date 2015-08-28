@@ -35,69 +35,69 @@ local areaCoords = {
     ID443 = {
         area = "Warsong Gulch",
         info = {
-            topLeft     = { label = "Ally %s", x1 = 0.453, x2 = 0.57, y1 = 0.08, y2 = 0.3 },
-            bottomLeft  = { label = "Horde %s", x1 = 0.44, x2 = 0.56, y1 = 0.73, y2 = 0.95 },
+            topLeft     = { label = "Ally", x1 = 0.453, x2 = 0.57, y1 = 0.08, y2 = 0.3 },
+            bottomLeft  = { label = "Horde", x1 = 0.44, x2 = 0.56, y1 = 0.73, y2 = 0.95 },
         }
     },
     ID461 = {
         area = "Arathi Basin",
         info = {
-            topLeft     = { label = "St %s", x1 = 0.33, x2 = 0.4, y1 = 0.24, y2 = 0.319 },
-            topRight    = { label = "%s GM", x1 = 0.53, x2 = 0.6, y1 = 0.27, y2 = 0.37 },
-            middleLeft  = { label = "AB %s", x1 = 0.432, x2 = 0.49, y1 = 0.38, y2 = 0.49 },
-            bottomLeft  = { label = "LM %s", x1 = 0.37, x2 = 0.44, y1 = 0.540, y2 = 0.65 },
-            bottomRight = { label = "%s Farm", x1 = 0.55, x2 = 0.62, y1 = 0.558, y2 = 0.638 },
+            topLeft     = { label = "St", x1 = 0.33, x2 = 0.4, y1 = 0.24, y2 = 0.319 },
+            topRight    = { label = "GM", x1 = 0.53, x2 = 0.6, y1 = 0.27, y2 = 0.37 },
+            middleLeft  = { label = "BS", x1 = 0.432, x2 = 0.49, y1 = 0.38, y2 = 0.49 },
+            bottomLeft  = { label = "LM", x1 = 0.37, x2 = 0.44, y1 = 0.540, y2 = 0.65 },
+            bottomRight = { label = "Farm", x1 = 0.55, x2 = 0.62, y1 = 0.558, y2 = 0.638 },
         }
     },
     ID482 = {
         area = "Eye of the Storm",
         info = {
-            topLeft     = { label = "MT %s", x1 = 0.38, x2 = 0.419, y1 = 0.395, y2 = 0.446 },
-            topRight    = { label = "%s DR", x1 = 0.55, x2 = 0.582, y1 = 0.382, y2 = 0.44 },
-            middleLeft  = { label = "Mid %s", x1 = 0.465, x2 = 0.5, y1 = 0.44, y2 = 0.54 },
-            bottomLeft  = { label = "FRR %s", x1 = 0.39, x2 = 0.425, y1 = 0.558, y2 = 0.61 },
-            bottomRight = { label = "%s BET", x1 = 0.546, x2 = 0.58, y1 = 0.55, y2 = 0.6 },
+            topLeft     = { label = "MT", x1 = 0.38, x2 = 0.419, y1 = 0.395, y2 = 0.446 },
+            topRight    = { label = "DR", x1 = 0.55, x2 = 0.582, y1 = 0.382, y2 = 0.44 },
+            middleLeft  = { label = "Mid", x1 = 0.465, x2 = 0.5, y1 = 0.44, y2 = 0.54 },
+            bottomLeft  = { label = "FRR", x1 = 0.39, x2 = 0.425, y1 = 0.558, y2 = 0.61 },
+            bottomRight = { label = "BET", x1 = 0.546, x2 = 0.58, y1 = 0.55, y2 = 0.6 },
         }
     },
     ID626 = {
         area = "Twin Peaks",
         info = {
-            topLeft     = { label = "Ally %s", x1 = 0.545, x2 = 0.65, y1 = 0.1, y2 = 0.29 },
-            bottomLeft  = { label = "Horde %s", x1 = 0.43, x2 = 0.55, y1 = 0.74, y2 = 0.94 },
+            topLeft     = { label = "Ally", x1 = 0.545, x2 = 0.65, y1 = 0.1, y2 = 0.29 },
+            bottomLeft  = { label = "Horde", x1 = 0.43, x2 = 0.55, y1 = 0.74, y2 = 0.94 },
         }
     },
     ID736 = {
         area = "Battle for Gilneas",
         info = {
-            topLeft     = { label = "Mine %s", x1 = 0.58, x2 = 0.652, y1 = 0.368, y2 = 0.452 },
-            bottomLeft  = { label = "LH %s", x1 = 0.317, x2 = 0.395, y1 = 0.58, y2 = 0.68 },
-            bottomRight = { label = "%s WW", x1 = 0.59, x2 = 0.66, y1 = 0.64, y2 = 0.76 },
+            topRight    = { label = "Mine", x1 = 0.58, x2 = 0.652, y1 = 0.368, y2 = 0.452 },
+            bottomLeft  = { label = "LH", x1 = 0.317, x2 = 0.395, y1 = 0.58, y2 = 0.68 },
+            bottomRight = { label = "WW", x1 = 0.59, x2 = 0.66, y1 = 0.64, y2 = 0.76 },
         }
     },
     ID856 = {
         area = "Temple of Kotmogu",
         info = {
-            topLeft     = { label = "Purple %s", x1 = 0.359, x2 = 0.43, y1 = 0.36, y2 = 0.464 },
-            topRight    = { label = "%s Orange", x1 = 0.545, x2 = 0.620, y1 = 0.36, y2 = 0.464 },
-            bottomLeft  = { label = "Green %s", x1 = 0.359, x2 = 0.43, y1 = 0.6, y2 = 0.702 },
-            bottomRight = { label = "%s Blue", x1 = 0.545, x2 = 0.620, y1 = 0.6, y2 = 0.702 },
+            topLeft     = { label = "Purple", x1 = 0.359, x2 = 0.43, y1 = 0.36, y2 = 0.464 },
+            topRight    = { label = "Orange", x1 = 0.545, x2 = 0.620, y1 = 0.36, y2 = 0.464 },
+            bottomLeft  = { label = "Green", x1 = 0.359, x2 = 0.43, y1 = 0.6, y2 = 0.702 },
+            bottomRight = { label = "Blue", x1 = 0.545, x2 = 0.620, y1 = 0.6, y2 = 0.702 },
         }
     },
     ID860 = {
         area = "Silvershard Mines",
         info = {
-            topLeft     = { label = "Earth %s", x1 = 0.15, x2 = 0.35, y1 = 0.28, y2 = 0.47 },
-            topRight    = { label = "%s Top", x1 = 0.67, x2 = 0.8, y1 = 0.15, y2 = 0.33 },
-            bottomLeft  = { label = "Water %s", x1 = 0.35, x2 = 0.482, y1 = 0.55, y2 = 0.9 },
-            bottomRight = { label = "%s Lava", x1 = 0.63, x2 = 0.75, y1 = 0.55, y2 = 0.84 },
+            topLeft     = { label = "Earth", x1 = 0.15, x2 = 0.35, y1 = 0.28, y2 = 0.47 },
+            topRight    = { label = "Top", x1 = 0.67, x2 = 0.8, y1 = 0.15, y2 = 0.33 },
+            bottomLeft  = { label = "Water", x1 = 0.35, x2 = 0.482, y1 = 0.55, y2 = 0.9 },
+            bottomRight = { label = "Lava", x1 = 0.63, x2 = 0.75, y1 = 0.55, y2 = 0.84 },
         }
     },
     ID935 = {
         area = "Deepwind Gorge",
         info = {
-            topLeft     = { label = "Panda %s", x1 = 0.54, x2 = 0.63, y1 = 0.08, y2 = 0.206 },
-            middleLeft  = { label = "Mid %s", x1 = 0.476, x2 = 0.581, y1 = 0.417, y2 = 0.568 },
-            bottomLeft  = { label = "Goblin %s", x1 = 0.41, x2 = 0.5, y1 = 0.784, y2 = 0.9 },
+            topLeft     = { label = "Panda", x1 = 0.54, x2 = 0.63, y1 = 0.08, y2 = 0.206 },
+            middleLeft  = { label = "Mid", x1 = 0.476, x2 = 0.581, y1 = 0.417, y2 = 0.568 },
+            bottomLeft  = { label = "Goblin", x1 = 0.41, x2 = 0.5, y1 = 0.784, y2 = 0.9 },
         }
     },
 }
@@ -215,7 +215,7 @@ function addon:OnInitialize()
                 order = 20,
                 type = "description",
                 fontSize = "medium",
-                name = "\n\n[R.A.D.A.R] Field features (this is BETA!! You have been warned!!!)\n",
+                name = "\n\nField features (this is BETA!! You have been warned!!!)\n",
                 width = "full",
             },
 
@@ -257,6 +257,8 @@ function addon:setupZonemap()
 end
 
 function addon:updateMarkers()
+    addon.markers = {}
+    
     local marker = _G["BattlefieldMinimapPlayer"]
     if marker then
         addon:setMaker(marker)
@@ -283,6 +285,7 @@ function addon:setMaker(marker)
     if UnitIsUnit(marker.unit, "player") then
         marker:SetHeight(default * addon.db.profile.arrowScale)
         marker:SetWidth(default * addon.db.profile.arrowScale)
+        marker.unit = "player"
     else
         marker:SetHeight(default * addon.db.profile.pointScale)
         marker:SetWidth(default * addon.db.profile.pointScale)
@@ -308,7 +311,15 @@ end
 function addon:updateInfo()
     for key in pairs(addon.info) do
         addon.info[key]:Hide()
+
+        -- if string.match(key, "Sub") then
+        --     addon.info[key]:SetText("Test Test Test Test Test Test Test Test Test Test")
+        -- else
+        --     addon.info[key]:SetText("Point (2)")
+        -- end
+        -- addon.info[key]:Show()
     end
+    
     
     local mapID = GetCurrentMapAreaID()
     if (not UnitInBattleground("player") or
@@ -324,21 +335,21 @@ function addon:updateInfo()
             if (meta.x >= posInfo.x1 and meta.x <= posInfo.x2 and
                 meta.y >= posInfo.y1 and meta.y <= posInfo.y2) then
                 num = num + 1
-                sub = sub .. string.format(classColorFormats[meta.classID], string.strsub(meta.name, 0,3)) .. " "
+                sub = sub .. string.format(classColorFormats[meta.classID], string.sub(meta.name, 0, 4)) .. " "
             end
         end
         
         local frame = addon.info[ posID ]
         local count = ""
         if num > 0 then
-            count = "(" .. num .. ")"
+            count = " (" .. num .. ")"
         end
-        frame:SetText(posInfo.label:format(count))
+        frame:SetText(posInfo.label .. count)
         frame:Show()
         
-        if num > 0 and num <= 5 then
+        if num > 0 and num < 9 then
             local subframe = addon.info[ posID .. "Sub" ]
-            subframe:SetText(subframe)
+            subframe:SetText(sub)
             subframe:Show()
         end
     end
@@ -346,95 +357,100 @@ end
 
 function addon:setupInfoFrames()
     local basesize = addon.db.profile.mapScale * 9
-    local subsize = basesize * 0.7
+    local subsize = basesize * 0.6
 
+    -- top left
     local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", basesize)
-    label:SetPoint("TOPLEFT", BattlefieldMinimap, 10, -10)
+    label:SetPoint("TOPLEFT", BattlefieldMinimap, 20, -20)
     label:SetJustifyH("LEFT")
     label:SetJustifyV("TOP")
     label:Hide()
     addon.info.topLeft = label
 
-    local label = frame:CreateFontString()
+    local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", subsize)
     label:SetWordWrap(true)
-    label:SetSize(basesize * 5, basesize * 2)
-    label:SetPoint("TOPLEFT", BattlefieldMinimap, 10, -10 - basesize)
+    label:SetSize(subsize * 10, subsize * 3)
+    label:SetPoint("TOPLEFT", addon.info.topLeft, "BOTTOMLEFT", 1, -2)
     label:SetJustifyH("LEFT")
     label:SetJustifyV("TOP")
     label:Hide()
     addon.info.topLeftSub = label
 
+    -- top right
     local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", basesize)
-    label:SetPoint("TOPRIGHT", BattlefieldMinimap, -20, -10)
-    label:SetJustifyH("RIGHT")
+    label:SetPoint("TOPRIGHT", BattlefieldMinimap, -30, -20)
+    label:SetJustifyH("LEFT")
     label:SetJustifyV("TOP")
     label:Hide()
     addon.info.topRight = label
 
-    local label = frame:CreateFontString()
+    local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", subsize)
     label:SetWordWrap(true)
-    label:SetSize(basesize * 5, basesize * 2)
-    label:SetPoint("TOPRIGHT", BattlefieldMinimap, -20, -10 - basesize)
-    label:SetJustifyH("RIGHT")
+    label:SetSize(subsize * 10, subsize * 3)
+    label:SetPoint("TOPLEFT", addon.info.topRight, "BOTTOMLEFT", 1, -2)
+    label:SetJustifyH("LEFT")
     label:SetJustifyV("TOP")
     label:Hide()
     addon.info.topRightSub = label
 
+    -- middle left
     local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", basesize)
-    label:SetPoint("TOPLEFT", BattlefieldMinimap, 10, -10 -basesize * 5)
+    label:SetPoint("TOPLEFT", BattlefieldMinimap, 20, -basesize * 5.5)
     label:SetJustifyH("LEFT")
     label:SetJustifyV("TOP")
     label:Hide()
     addon.info.middleLeft = label
 
-    local label = frame:CreateFontString()
+    local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", subsize)
     label:SetWordWrap(true)
-    label:SetSize(basesize * 5, basesize * 2)
-    label:SetPoint("TOPLEFT", BattlefieldMinimap, 10, -10 -basesize * 6)
+    label:SetSize(subsize * 10, subsize * 3)
+    label:SetPoint("TOPLEFT", addon.info.middleLeft, "BOTTOMLEFT", 1, -2)
     label:SetJustifyH("LEFT")
     label:SetJustifyV("TOP")
     label:Hide()
     addon.info.middleLeftSub = label
 
+    -- bottom left
     local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", basesize)
-    label:SetPoint("TOPLEFT", BattlefieldMinimap, "BOTTOMLEFT", 10, 20 + basesize * 3)
+    label:SetPoint("TOPLEFT", BattlefieldMinimap, "BOTTOMLEFT", 20, 20 + basesize * 3.5)
     label:SetJustifyH("LEFT")
-    label:SetJustifyV("BOTTOM")
+    label:SetJustifyV("TOP")
     label:Hide()
     addon.info.bottomLeft = label
 
-    local label = frame:CreateFontString()
+    local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", subsize)
     label:SetWordWrap(true)
-    label:SetSize(basesize * 5, basesize * 2)
-    label:SetPoint("TOPLEFT", BattlefieldMinimap, "BOTTOMLEFT", 10, 20 + basesize * 2.5)
+    label:SetSize(subsize * 10, subsize * 3)
+    label:SetPoint("TOPLEFT", addon.info.bottomLeft, "BOTTOMLEFT", 1, -2)
     label:SetJustifyH("LEFT")
-    label:SetJustifyV("BOTTOM")
+    label:SetJustifyV("TOP")
     label:Hide()
     addon.info.bottomLeftSub = label
 
+    -- bottom right
     local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", basesize)
-    label:SetPoint("TOPRIGHT", BattlefieldMinimap, "BOTTOMRIGHT", -20, 20 + basesize * 3)
-    label:SetJustifyH("RIGHT")
-    label:SetJustifyV("BOTTOM")
+    label:SetPoint("TOPRIGHT", BattlefieldMinimap, "BOTTOMRIGHT", -30, 20 + basesize *  3.5)
+    label:SetJustifyH("LEFT")
+    label:SetJustifyV("TOP")
     label:Hide()
     addon.info.bottomRight = label
 
-    local label = frame:CreateFontString()
+    local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", subsize)
     label:SetWordWrap(true)
-    label:SetSize(basesize * 5, basesize * 2)
-    label:SetPoint("TOPRIGHT", BattlefieldMinimap, "BOTTOMRIGHT", -20, 20 + basesize * 2.5)
-    label:SetJustifyH("RIGHT")
-    label:SetJustifyV("BOTTOM")
+    label:SetSize(subsize * 10, subsize * 3)
+    label:SetPoint("TOPLEFT", addon.info.bottomRight, "BOTTOMLEFT", 1, -2)
+    label:SetJustifyH("LEFT")
+    label:SetJustifyV("TOP")
     label:Hide()
     addon.info.bottomRightSub = label
 end
