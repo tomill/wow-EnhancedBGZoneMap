@@ -104,8 +104,8 @@ local areaCoords = {
 
 
 local addon = LibStub("AceAddon-3.0"):NewAddon("EnhancedBGZoneMap")
-local tick = CreateFrame("Frame")
-local frame = CreateFrame("Frame")
+local frame = CreateFrame("Frame", nil, UIParent)
+local tick = CreateFrame("Frame", nil, frame)
 frame:RegisterEvent("ADDON_LOADED")
 frame:RegisterEvent("GROUP_ROSTER_UPDATE")
 frame:RegisterEvent("PLAYER_ENTERING_BATTLEGROUND")
@@ -312,12 +312,14 @@ function addon:updateInfo()
     for key in pairs(addon.info) do
         addon.info[key]:Hide()
 
-        -- if string.match(key, "Sub") then
-        --     addon.info[key]:SetText("Test Test Test Test Test Test Test Test Test Test")
-        -- else
-        --     addon.info[key]:SetText("Point (2)")
-        -- end
-        -- addon.info[key]:Show()
+--[[
+        if string.match(key, "Sub") then
+            addon.info[key]:SetText("Test Test Test Test Test Test Test Test Test Test")
+        else
+            addon.info[key]:SetText("Point (2)")
+        end
+        addon.info[key]:Show()
+--]]
     end
     
     
@@ -356,13 +358,14 @@ function addon:updateInfo()
 end
 
 function addon:setupInfoFrames()
+    local padding = addon.db.profile.mapScale * 13 
     local basesize = addon.db.profile.mapScale * 9
-    local subsize = basesize * 0.6
+    local subsize = basesize * 0.7
 
     -- top left
     local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", basesize)
-    label:SetPoint("TOPLEFT", BattlefieldMinimap, 20, -20)
+    label:SetPoint("TOPLEFT", BattlefieldMinimap, padding, -1 * padding)
     label:SetJustifyH("LEFT")
     label:SetJustifyV("TOP")
     label:Hide()
@@ -381,7 +384,7 @@ function addon:setupInfoFrames()
     -- top right
     local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", basesize)
-    label:SetPoint("TOPRIGHT", BattlefieldMinimap, -30, -20)
+    label:SetPoint("TOPRIGHT", BattlefieldMinimap, -2 * padding, -1 * padding)
     label:SetJustifyH("LEFT")
     label:SetJustifyV("TOP")
     label:Hide()
@@ -400,7 +403,7 @@ function addon:setupInfoFrames()
     -- middle left
     local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", basesize)
-    label:SetPoint("TOPLEFT", BattlefieldMinimap, 20, -basesize * 5.5)
+    label:SetPoint("TOPLEFT", BattlefieldMinimap, padding, -basesize * 5.5)
     label:SetJustifyH("LEFT")
     label:SetJustifyV("TOP")
     label:Hide()
@@ -419,7 +422,7 @@ function addon:setupInfoFrames()
     -- bottom left
     local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", basesize)
-    label:SetPoint("TOPLEFT", BattlefieldMinimap, "BOTTOMLEFT", 20, 20 + basesize * 3.5)
+    label:SetPoint("TOPLEFT", BattlefieldMinimap, "BOTTOMLEFT", padding, padding + basesize * 3.5)
     label:SetJustifyH("LEFT")
     label:SetJustifyV("TOP")
     label:Hide()
@@ -438,7 +441,7 @@ function addon:setupInfoFrames()
     -- bottom right
     local label = frame:CreateFontString("NameText", "ARTWORK", "GameFontHighlightSmall")
     label:SetFont("Fonts\\FRIZQT__.TTF", basesize)
-    label:SetPoint("TOPRIGHT", BattlefieldMinimap, "BOTTOMRIGHT", -30, 20 + basesize *  3.5)
+    label:SetPoint("TOPRIGHT", BattlefieldMinimap, "BOTTOMRIGHT", -2 * padding, padding + basesize *  3.5)
     label:SetJustifyH("LEFT")
     label:SetJustifyV("TOP")
     label:Hide()
