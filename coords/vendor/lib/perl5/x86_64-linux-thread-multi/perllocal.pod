@@ -1,0 +1,44 @@
+=head2 Thu Aug 20 16:35:39 2015: C<Module> L<Data::Dump|Data::Dump>
+
+=over 4
+
+=item *
+
+C<installed into: /home/tomi/Dropbox/dev/wow-addons/EnhancedBGZoneMap/images/vendor/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.23>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Aug 20 16:37:00 2015: C<Module> L<Imager|Imager>
+
+=over 4
+
+=item *
+
+C<installed into: /home/tomi/Dropbox/dev/wow-addons/EnhancedBGZoneMap/images/vendor/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.003>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+

@@ -10,6 +10,7 @@ sub lua_to_perl {
     my $code = shift || "";
     my $areaCoords;
     $code =~ s/local /my \$/g;
+    $code =~ s/\[(".+?")\]/$1/g;
     $code =~ s/ = / => /g;
     return eval "$code";
 }
@@ -18,7 +19,7 @@ my $basedata = lua_to_perl($lua);
 
 for my $key (sort keys %$basedata) {
     my $info = $basedata->{$key}{info};
-    dump $basedata->{$key};
+    dump "$key.jpg", $basedata->{$key};
     show_layer("$key.jpg", $info);
 }
 
@@ -42,24 +43,24 @@ sub show_layer {
 
 __DATA__
 local areaCoords = {
-    ID443 = {
+    ["wsg"] = {
         area = "Warsong Gulch",
         info = {
             topLeft     = { label = "Ally", x1 = 0.453, x2 = 0.57, y1 = 0.08, y2 = 0.3 },
             bottomLeft  = { label = "Horde", x1 = 0.44, x2 = 0.56, y1 = 0.73, y2 = 0.95 },
         }
     },
-    ID461 = {
+    ["ab"] = {
         area = "Arathi Basin",
         info = {
-            topLeft     = { label = "St", x1 = 0.33, x2 = 0.4, y1 = 0.24, y2 = 0.319 },
+            topLeft     = { label = "ST", x1 = 0.33, x2 = 0.4, y1 = 0.24, y2 = 0.319 },
             topRight    = { label = "GM", x1 = 0.53, x2 = 0.6, y1 = 0.27, y2 = 0.37 },
             middleLeft  = { label = "BS", x1 = 0.432, x2 = 0.49, y1 = 0.38, y2 = 0.49 },
             bottomLeft  = { label = "LM", x1 = 0.37, x2 = 0.44, y1 = 0.540, y2 = 0.65 },
             bottomRight = { label = "Farm", x1 = 0.55, x2 = 0.62, y1 = 0.558, y2 = 0.638 },
         }
     },
-    ID482 = {
+    ["eots"] = {
         area = "Eye of the Storm",
         info = {
             topLeft     = { label = "MT", x1 = 0.38, x2 = 0.419, y1 = 0.395, y2 = 0.446 },
@@ -69,14 +70,14 @@ local areaCoords = {
             bottomRight = { label = "BET", x1 = 0.546, x2 = 0.58, y1 = 0.55, y2 = 0.6 },
         }
     },
-    ID626 = {
+    ["tp"] = {
         area = "Twin Peaks",
         info = {
             topLeft     = { label = "Ally", x1 = 0.545, x2 = 0.65, y1 = 0.1, y2 = 0.29 },
             bottomLeft  = { label = "Horde", x1 = 0.43, x2 = 0.55, y1 = 0.74, y2 = 0.94 },
         }
     },
-    ID736 = {
+    ["gilneas"] = {
         area = "Battle for Gilneas",
         info = {
             topRight    = { label = "Mine", x1 = 0.58, x2 = 0.652, y1 = 0.368, y2 = 0.452 },
@@ -84,7 +85,7 @@ local areaCoords = {
             bottomRight = { label = "WW", x1 = 0.59, x2 = 0.66, y1 = 0.64, y2 = 0.76 },
         }
     },
-    ID856 = {
+    ["temple"] = {
         area = "Temple of Kotmogu",
         info = {
             topLeft     = { label = "Purple", x1 = 0.359, x2 = 0.43, y1 = 0.36, y2 = 0.464 },
@@ -93,7 +94,7 @@ local areaCoords = {
             bottomRight = { label = "Blue", x1 = 0.545, x2 = 0.620, y1 = 0.6, y2 = 0.702 },
         }
     },
-    ID860 = {
+    ["mines"] = {
         area = "Silvershard Mines",
         info = {
             topLeft     = { label = "Earth", x1 = 0.15, x2 = 0.35, y1 = 0.28, y2 = 0.47 },
@@ -102,7 +103,7 @@ local areaCoords = {
             bottomRight = { label = "Lava", x1 = 0.63, x2 = 0.75, y1 = 0.55, y2 = 0.84 },
         }
     },
-    ID935 = {
+    ["panda"] = {
         area = "Deepwind Gorge",
         info = {
             topLeft     = { label = "Panda", x1 = 0.54, x2 = 0.63, y1 = 0.08, y2 = 0.206 },
