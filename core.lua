@@ -173,14 +173,14 @@ function addon:OnInitialize()
             arrowScale = 1,
             pointScale = 0.5,
             hideBorder = false,
-            feature443 = false,
-            feature461 = false,
-            feature482 = false,
-            feature626 = false,
-            feature736 = false,
-            feature856 = false,
-            feature860 = false,
-            feature935 = false,
+            feature_wsg = true,
+            feature_ab = true,
+            feature_eots = true,
+            feature_tp = true,
+            feature_gilneas = true,
+            feature_temple = true,
+            feature_mines = true,
+            feature_panda = true,
         }
     }
 
@@ -232,14 +232,14 @@ function addon:OnInitialize()
                 width = "full",
             },
 
-            feature443 = { order = 21, type = "toggle", name = "Warsong Gulch", width = "full", set = setter, get = getter },
-            feature461 = { order = 22, type = "toggle", name = "Arathi Basin", width = "full", set = setter, get = getter },
-            feature482 = { order = 23, type = "toggle", name = "Eye of the Storm", width = "full", set = setter, get = getter },
-            feature626 = { order = 24, type = "toggle", name = "Twin Peaks", width = "full", set = setter, get = getter },
-            feature736 = { order = 25, type = "toggle", name = "Battle for Gilneas", width = "full", set = setter, get = getter },
-            feature856 = { order = 26, type = "toggle", name = "Temple of Kotmogu", width = "full", set = setter, get = getter },
-            feature860 = { order = 27, type = "toggle", name = "Silvershard Mine", width = "full", set = setter, get = getter },
-            feature935 = { order = 28, type = "toggle", name = "Deepwind Gorge", width = "full", set = setter, get = getter },
+            feature_wsg = { order = 21, type = "toggle", name = "Warsong Gulch", width = "full", set = setter, get = getter },
+            feature_ab = { order = 22, type = "toggle", name = "Arathi Basin", width = "full", set = setter, get = getter },
+            feature_eots = { order = 23, type = "toggle", name = "Eye of the Storm", width = "full", set = setter, get = getter },
+            feature_tp = { order = 24, type = "toggle", name = "Twin Peaks", width = "full", set = setter, get = getter },
+            feature_gilneas = { order = 25, type = "toggle", name = "Battle for Gilneas", width = "full", set = setter, get = getter },
+            feature_temple = { order = 26, type = "toggle", name = "Temple of Kotmogu", width = "full", set = setter, get = getter },
+            feature_mines = { order = 27, type = "toggle", name = "Silvershard Mine", width = "full", set = setter, get = getter },
+            feature_panda = { order = 28, type = "toggle", name = "Deepwind Gorge", width = "full", set = setter, get = getter },
         }
     }
     
@@ -337,13 +337,14 @@ function addon:updateInfo()
     
     
     local mapID = GetCurrentMapAreaID()
+    local areaID = mapid2area["" .. mapID]
     if (not UnitInBattleground("player") or
-        not addon.db.profile["feature" .. mapID] or
-        not mapid2area["" . mapID]) then
+        not areaID or
+        not addon.db.profile["feature_" .. areaID]) then
         return
     end
-    
-    local coords = areaCoords[ mapid2area["" . mapID] ]
+        
+    local coords = areaCoords[ areaID ]
     for posID, posInfo in pairs(coords.info) do
         local num = 0
         local sub = ""
