@@ -264,12 +264,16 @@ function addon:setupZonemap()
     end
     
     BattlefieldMinimap:SetScale(addon.db.profile.mapScale)
-    BattlefieldMinimap:Show()
+    -- BattlefieldMinimap:Show()
     
     addon:updateMarkers()
 end
 
 function addon:updateMarkers()
+    if not BattlefieldMinimap:IsShown() then
+        return
+    end
+    
     addon.markers = {}
     
     local marker = _G["BattlefieldMinimapPlayer"]
