@@ -225,12 +225,22 @@ function addon:OnInitialize()
                 set = setter,
                 get = getter,
             },
+            tip = {
+                order = 16,
+                type = "description",
+                name = [[
+Tip: You can modify opecity and position by built-in blizzard function.
+Mouseover upper-right corner of the zonemap frame.
 
+]],
+                width = "full",
+            },
+            
             desc = {
                 order = 20,
                 type = "description",
                 fontSize = "medium",
-                name = "\n\nField features\n",
+                name = "Field features",
                 width = "full",
             },
 

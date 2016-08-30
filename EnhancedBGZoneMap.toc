@@ -1,8 +1,8 @@
-## Interface: 60200
+## Interface: 70000
 ## Title: Enhanced BG Zone Map
-## Notes: Replace player marker dot to each class color and more
+## Notes: Zonemap mod especially for BG players
 ## Author: Tomill
-## Version: 1.3.3
+## Version: 1.4.0
 ## SavedVariables: EnhancedBGZoneMapDB
 
 #@no-lib-strip@
