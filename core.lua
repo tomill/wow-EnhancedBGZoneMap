@@ -1,33 +1,35 @@
 -- required
 LoadAddOn("Blizzard_BattlefieldMinimap")
 
--- coordes for Interface/Minimap/PartyRaidBlips.blp
+-- from FrameXML/WorldMapFrame.lua
 local BLIP_TEX_COORDS = {
-    ["WARRIOR"]     = { 0,     0.125, 0,    0.25 },
-    ["PALADIN"]     = { 0.125, 0.25,  0,    0.25 },
-    ["HUNTER"]      = { 0.25,  0.375, 0,    0.25 },
-    ["ROGUE"]       = { 0.375, 0.5,   0,    0.25 },
-    ["PRIEST"]      = { 0.5,   0.625, 0,    0.25 },
-    ["DEATHKNIGHT"] = { 0.625, 0.75,  0,    0.25 },
-    ["SHAMAN"]      = { 0.75,  0.875, 0,    0.25 },
-    ["MAGE"]        = { 0.875, 1,     0,    0.25 },
-    ["WARLOCK"]     = { 0,     0.125, 0.25, 0.5  },
-    ["DRUID"]       = { 0.25,  0.375, 0.25, 0.5  },
-    ["MONK"]        = { 0.125, 0.25,  0.25, 0.5  },
+	["WARRIOR"]		 = { 0, 0.125, 0, 0.25 },
+	["PALADIN"]		 = { 0.125, 0.25, 0, 0.25 },
+	["HUNTER"]		 = { 0.25, 0.375, 0, 0.25 },
+	["ROGUE"]		 = { 0.375, 0.5, 0, 0.25 },
+	["PRIEST"]		 = { 0.5, 0.625, 0, 0.25 },
+	["DEATHKNIGHT"]	 = { 0.625, 0.75, 0, 0.25 },
+	["SHAMAN"]		 = { 0.75, 0.875, 0, 0.25 },
+	["MAGE"]		 = { 0.875, 1, 0, 0.25 },
+	["WARLOCK"]		 = { 0, 0.125, 0.25, 0.5 },
+	["DRUID"]		 = { 0.25, 0.375, 0.25, 0.5 },
+	["MONK"]		 = { 0.125, 0.25, 0.25, 0.5 },
+	["DEMONHUNTER"]	 = { 0.375, 0.5, 0.25, 0.5 },
 }
 
 local classColorFormats = {
     ["DEATHKNIGHT"] = "|cFFC41F3B%s|r",
-    ["DRUID"] = "|cFFFF7D0A%s|r",
-    ["HUNTER"] = "|cFFABD473%s|r",
-    ["MAGE"] = "|cFF69CCF0%s|r",
-    ["MONK"] = "|cFF00FF96%s|r",
-    ["PALADIN"] = "|cFFF58CBA%s|r",
-    ["PRIEST"] = "|cFFFFFFFF%s|r",
-    ["ROGUE"] = "|cFFFFF569%s|r",
-    ["SHAMAN"] = "|cFF0070DE%s|r",
-    ["WARLOCK"] = "|cFF9482C9%s|r",
-    ["WARRIOR"] = "|cFFC79C6E%s|r",
+    ["DRUID"]       = "|cFFFF7D0A%s|r",
+    ["HUNTER"]      = "|cFFABD473%s|r",
+    ["MAGE"]        = "|cFF69CCF0%s|r",
+    ["MONK"]        = "|cFF00FF96%s|r",
+    ["PALADIN"]     = "|cFFF58CBA%s|r",
+    ["PRIEST"]      = "|cFFFFFFFF%s|r",
+    ["ROGUE"]       = "|cFFFFF569%s|r",
+    ["SHAMAN"]      = "|cFF0070DE%s|r",
+    ["WARLOCK"]     = "|cFF9482C9%s|r",
+    ["WARRIOR"]     = "|cFFC79C6E%s|r",
+    ["DEMONHUNTER"] = "|cFFA330C9%s|r",
 }
 
 local mapid2area = {
@@ -228,7 +230,7 @@ function addon:OnInitialize()
                 order = 20,
                 type = "description",
                 fontSize = "medium",
-                name = "\n\nField features (this is BETA!! You have been warned!!!)\n",
+                name = "\n\nField features\n",
                 width = "full",
             },
 
